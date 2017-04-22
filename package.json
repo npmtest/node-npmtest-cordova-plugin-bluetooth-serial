@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-cordova-plugin-bluetooth-serial",     "homepage": "https://github.com/npmtest/node-npmtest-cordova-plugin-bluetooth-serial",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-cordova-plugin-bluetooth-serial.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [cordova-plugin-bluetooth-serial (v0.4.7)](https://github.com/don/BluetoothSerial#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-cordova-plugin-bluetooth-serial.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-cordova-plugin-bluetooth-serial) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-cordova-plugin-bluetooth-serial.svg)](https://travis-ci.org/npmtest/node-npmtest-cordova-plugin-bluetooth-serial)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-cordova-plugin-bluetooth-serial",
+    "keywords": [
+        "coverage",
+        "test",
+        "cordova-plugin-bluetooth-serial"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_cordova_plugin_bluetooth_serial.js",
+    "name": "npmtest-cordova-plugin-bluetooth-serial",
+    "nameAlias": "npmtest_cordova_plugin_bluetooth_serial",
+    "nameOriginal": "npmtest-cordova-plugin-bluetooth-serial",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-cordova-plugin-bluetooth-serial.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "2017.4.23"
+}
